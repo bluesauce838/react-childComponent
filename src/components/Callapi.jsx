@@ -16,12 +16,16 @@ function Callapi() {
       .then((response) => response.json())
       .then((data) => setData(data));
   }, []);
-  if (data) return <Githubuser name={(data.name, data.url)} />;
-  return <pre> {JSON.stringify(data, null, 2)} </pre>;
+  if (data) 
+
+  // return <pre> {JSON.stringify(data, null, 2)} </pre>;
 
   return (
     <div>
       <h1>are you advent</h1>
+      <Githubuser name={(data.name)} />
+      <Githubuser name={(data.url)} />
+      <Githubuser name={(data.id)} />
     </div>
   );
 }
